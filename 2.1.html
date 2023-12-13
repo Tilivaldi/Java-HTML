@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2.1</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 0px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: 700;
+        }
+
+        img {
+            max-width: 100px;
+            max-height: 100px;
+            cursor: pointer;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="/submit_order" method="post">
+
+    <table>
+        <tbody>
+            <tr>
+                <td>Имя</td>
+                <td>Фамилия</td>
+                <td>Логин</td>
+            </tr>
+
+            <tr>
+                <td><input type="text" name="name" placeholder="Имя"></td>
+                <td><input type="text" name="surname" placeholder="Фамилия"></td>
+                <td><input type="text" name="login" placeholder="Логин"></td>
+            </tr>
+
+            <tr>
+                <td>Страна</td>
+                <td>Город</td>
+                <td>Улица</td>
+            </tr>
+
+            <tr>
+                <td>
+                    <select name="country">
+                        <option value="kz">Казахстан</option>
+                        <option value="rus">Россия</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="city">
+                        <option value="kz">Алматы</option>
+                        <option value="rus">Астана</option>
+                    </select>
+                </td>
+                <td><input type="text" name="street"></td>
+            </tr>
+
+        </tbody>
+    </table>
+    <input type="submit" value="Заказать">
+</form>
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 3</title>
+    <style>
+        table {
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 200px;
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+
+<form action="/submit_order" method="post">
+    <table>
+        <tr>
+            <td>Имя</td>
+            
+            <td><input type="text" name="name" required></td>
+           
+        </tr>
+        <tr>
+            <td>Фамилия</td>
+            
+            <td><input type="text" name="surname" required></td>
+           
+        </tr>
+        <tr>
+            <td>Отчество</td>
+            
+            <td><input type="text" name="fathernam" required></td>
+           
+        </tr>
+        <tr>
+            <td>Родной город</td>
+            <td>
+                <select name="city">
+                    <option value="almaty">Almaty</option>
+                    <option value="astana">Astana</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Дата рождения</td>
+            <td>
+                <input type="date" name="date" value="date">
+            </td>
+        </tr>
+        <tr>
+            <td>Образование</td>
+            <td>
+                <select name="city">
+                    <option value="school">Школа</option>
+                    <option value="univer">Универ</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Балы ЕНТ</td>
+            <td><input type="text" name="ent" required></td>
+        </tr>
+        
+    </table>
+    <input type="submit" value="Register">
+</form>
+
+</body>
+</html>

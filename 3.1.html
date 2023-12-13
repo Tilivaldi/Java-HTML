@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        header{
+            background-color: rgb(4, 0, 229);
+            display: flex;
+            justify-content: space-between;
+        }
+        .logo{
+            color: #fff;
+            font-size: 36px;
+            line-height: 105px;
+            padding: 0 16px;
+        }
+
+        .menu{
+            display: flex;
+            gap: 24px;
+            list-style: none;
+            line-height: 76px;
+            padding: 0 16px 0 0;
+            color: #b7c0c8;
+        }
+
+        footer{
+            background-color: #000;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 80px;
+            text-align: center;
+            line-height: 80px;
+        }
+
+    
+        input[type="submit"] {
+            color: #fff;
+            border-radius: 4px;
+            background-color: #4CAF50;
+            border-color: #fff;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .page {
+            display: flex;
+        }
+
+        .main-news {
+    padding: 0 52px;
+    margin: 0 0 12px 0;
+}
+
+.news h4 {
+    color: blue;
+    font-size: 24px;
+    margin: 0 0 16px 0;
+}
+
+.news img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+tr.tr-one {
+    background-color: #009688;
+}
+
+.tr-two {
+    background-color: #8BC34A;
+}
+
+.tr-last {
+    background-color: #FF5722;
+}
+
+    </style>
+</head>
+<body>
+    <header style="">
+        <div class="logo">
+          BITLAB
+        </div>
+        <ul class="menu">
+            <li>About</li>
+            <li>Contacts</li>
+            <li>FAQ</li>
+            <li>LOGIN</li>
+        </ul>
+    </header>
+    <section class="page">
+       <div class="sidebar-left">
+            <form action="/submit_order" method="post">
+                <p>Email</p>
+                <input type="email" placeholder="Email" name="email">
+                <p>Email</p>
+                <input type="password" placeholder="password" name="password"><br/>
+                <input type="submit" value="SIGN IN">
+            </form>
+            <p>I want to create <a href="javascript:void(0)">new account</a></p>
+       </div>
+       <div class="main">
+            <div class="main-news">
+                <div class="news">
+                    <h4>Lorem ipsum dolor sit amet</h4>
+                    <img src="img/first/task1_pic_1.jpeg"/>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisl dolor, sodales id leo vel, tempor facilisis neque. In libero nunc, pretium non purus ut, gravida blandit massa. Etiam imperdiet mi ut velit condimentum, ut molestie mauris facilisis. Nam eu aliquam odio. Proin fringilla luctus mauris, non sollicitudin mauris lacinia sed. Interdum et malesuada fames ac ante ipsum primis in faucibus. </p>
+                </div>
+                <div class="news">
+                    <h4>Lorem ipsum dolor sit amet</h4>
+                    <img src="img/first/task1_pic_1.jpeg"/>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisl dolor, sodales id leo vel, tempor facilisis neque. In libero nunc, pretium non purus ut, gravida blandit massa. Etiam imperdiet mi ut velit condimentum, ut molestie mauris facilisis. Nam eu aliquam odio. Proin fringilla luctus mauris, non sollicitudin mauris lacinia sed. Interdum et malesuada fames ac ante ipsum primis in faucibus. </p>
+                </div>
+                <div class="news">
+                    <h4>Lorem ipsum dolor sit amet</h4>
+                    <img src="img/first/task1_pic_1.jpeg"/>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisl dolor, sodales id leo vel, tempor facilisis neque. In libero nunc, pretium non purus ut, gravida blandit massa. Etiam imperdiet mi ut velit condimentum, ut molestie mauris facilisis. Nam eu aliquam odio. Proin fringilla luctus mauris, non sollicitudin mauris lacinia sed. Interdum et malesuada fames ac ante ipsum primis in faucibus. </p>
+                </div>
+            </div>
+       </div>
+       <div class="sidebar-right">
+            <table border="1" style="    background-color: #e7e2e269;">
+                <thead>
+                    <th>No</th>
+                    <th>Team</th>
+                    <th>P</th>
+                    <th>W</th>
+                    <th>D</th>
+                    <th>L</th>
+                    <th>GD</th>
+                    <th>P</th>
+                </thead>
+                <tbody>
+                    <tr class="tr-one">
+                        <td>1</td>
+                        <td>Ливерпуль</td>
+                        <td>16</td>
+                        <td>11</td>
+                        <td>4</td>
+                        <td>1</td>
+                        <td>36:15</td>
+                        <td>37</td>
+                    </tr>
+
+                    <tr class="tr-two">
+                        <td>2</td>
+                        <td>Арсенал (Лондон)</td>
+                        <td>16</td>
+                        <td>11</td>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>33:15</td>
+                        <td>36</td>
+                    </tr>
+
+                    <tr class="tr-two">
+                        <td>3</td>
+                        <td>Астон Вилла (Бирмингем)</td>
+                        <td>16</td>
+                        <td>11</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>35:20</td>
+                        <td>35</td>
+                    </tr>
+
+                    <tr class="tr-two">
+                        <td>4</td>
+                        <td>Манчестер Сити</td>
+                        <td>16</td>
+                        <td>10</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>38:18	</td>
+                        <td>33</td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>Тоттенхэм (Лондон)</td>
+                        <td>16</td>
+                        <td>9</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>33:23	</td>
+                        <td>30</td>
+                    </tr>
+
+                    <tr>
+                        <td>6</td>
+                        <td>Манчестер Юнайтед</td>
+                        <td>16</td>
+                        <td>9</td>
+                        <td>0</td>
+                        <td>7</td>
+                        <td>18:21</td>
+                        <td>27</td>
+                    </tr>
+
+                    <tr>
+                        <td>7</td>
+                        <td>Ньюкасл Юнайтед (Ньюкасл-апон-Тайн)</td>
+                        <td>16</td>
+                        <td>8</td>
+                        <td>2</td>
+                        <td>6</td>
+                        <td>33:21	</td>
+                        <td>26</td>
+                    </tr>
+
+                    <tr>
+                        <td>8</td>
+                        <td>	Брайтон энд Хоув Альбион</td>
+                        <td>16</td>
+                        <td>7</td>
+                        <td>5</td>
+                        <td>4</td>
+                        <td>33:28	</td>
+                        <td>26</td>
+                    </tr>
+
+                    <tr>
+                        <td>9</td>
+                        <td>Вест Хэм (Лондон)</td>
+                        <td>16</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>10</td>
+                        <td>Фулхэм (Лондон)</td>
+                        <td>16</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>11</td>
+                        <td>	Брентфорд (Лондон)</td>
+                        <td>16</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>12</td>
+                        <td>Челси (Лондон)</td>
+                        <td>16</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>13</td>
+                        <td>	Вулверхэмптон</td>
+                        <td>16</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>14</td>
+                        <td>	Борнмут</td>
+                        <td>16</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>15</td>
+                        <td>	Кристал Пэлас (Лондон)</td>
+                        <td>16</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>16</td>
+                        <td>	Ноттингем Форест</td>
+                        <td>16</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>17</td>
+                        <td>	Эвертон (Ливерпуль)*</td>
+                        <td>16</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr class="tr-last">
+                        <td>18</td>
+                        <td>Лутон Таун</td>
+                        <td>16</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr class="tr-last">
+                        <td>19</td>
+                        <td>Бернли</td>
+                        <td>16</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr class="tr-last">
+                        <td>20</td>
+                        <td>Шеффилд Юнайтед</td>
+                        <td>16</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+       </div>
+    </section>
+    <footer style="">
+        <span style="color:#fff">
+            Copyright &copy; Developed By Student Amrayev. All right reserved
+        </span>
+    </footer>
+</body>
+</html>

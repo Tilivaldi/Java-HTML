@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2.2</title>
+    <style >
+        input[type="text"], select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 200px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .inform{
+            display: flex;
+    gap: 20px;
+        }
+
+        .choise-film{
+            display: flex;
+    gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p>Название фильма</p>
+    <input type="text" name="film-name" id="" placeholder="Название фильма">
+    <div>
+        <div class="inform">
+            <span style="    flex: 0 0 494px;">Кинотеатры</span>
+            <span>Время сеанса</span>
+        </div>
+        <div class="choise-film">
+            <select name="cinema">
+                <option value="kinopark">Kinopark</option>
+                <option value="arman">Arman</option>
+            </select>
+
+            <select name="time-hour">
+                <option value="oneh">1</option>
+                <option value="twoh">2</option>
+            </select>
+
+            <select name="time-munites">
+                <option value="double-zero">00</option>
+                <option value="ten-minutes">10</option>
+            </select>
+        </div>
+    </div>
+</body>
+</html>

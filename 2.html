@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2</title>
+    <style>
+        table {
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 200px;
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+
+<form action="/submit_order" method="post">
+    <table>
+        <tr>
+            <th>Параметр</th>
+            <th>Выбор</th>
+        </tr>
+        <tr>
+            <td>Тип булочки</td>
+            <td>
+                <select name="bun">
+                    <option value="regular">Обычная</option>
+                    <option value="irregular">С кунжутом</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Тип мяса</td>
+            <td>
+                <select name="meat">
+                    <option value="beef">Говядина</option>
+                    <option value="chicken">Курица</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Опции</td>
+            <td>
+                <input type="checkbox" name="tomato" value="tomato"> Помидоры<br>
+                <input type="checkbox" name="pickles" value="pickles"> Солёные огурцы<br>
+            </td>
+        </tr>
+        <tr>
+            <td>Адрес</td>
+            <td><input type="text" name="address" required></td>
+        </tr>
+        <tr>
+            <td>Имя покупателя</td>
+            <td><input type="text" name="customer_name" required></td>
+        </tr>
+        <tr>
+            <td>Желаемое время доставки</td>
+            <td><input type="text" name="delivery_time" required></td>
+        </tr>
+        <tr>
+            <td>Выбор бургера</td>
+            <td>
+                <select name="burger_type">
+                    <option value="cheeseburger">Чизбургер</option>
+                    <option value="chickenburger">Чикенбургер</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Заказать">
+</form>
+
+</body>
+</html>
