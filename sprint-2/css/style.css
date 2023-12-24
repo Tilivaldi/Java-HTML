@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    background-image: url(../img/back2.png);
 }
 
 /* Указываем box sizing */
@@ -155,9 +156,9 @@ input[type="submit"] {
 }
 
 .center{
-    width: 960px;
+    width: 1200px;
     display: flex;
-    margin:0 auto;
+    margin:27px auto;
     justify-content: space-between;
     gap: 12px;
 }
@@ -210,7 +211,8 @@ h6 {
 }
 
 .sidebar-left{
-    flex-basis: 200px;
+    flex-basis: 180px;
+    padding: 0 0 0 50px;
 }
 
 .main {
@@ -255,7 +257,7 @@ h6 {
 }
 
 .user-menu li {
-    padding: 4px 4px 4px 0px;
+    padding: 4px 4px 10px 0px;
     color: gray;
 }
 
@@ -352,19 +354,18 @@ input.remove-btn {
 }
 
 .intro-information {
-    flex-basis: 260px;
+    width: 300px;
 }
-
 .main-photo {
     background-color: #fff;
-    padding: 12px;
+    padding: 13px 16px;
     margin: 0 0 12px 0;
     border-radius: 8px;
 }
 
 .main-photo img{
-    width: 236px;
-    height: 236px;
+    width: 274px;
+    height: 274px;
     object-fit: cover;
 }
 
@@ -379,29 +380,40 @@ input.remove-btn {
 
 .main-friends {
     background-color: #fff;
-    padding: 12px;
+    padding: 10px;
     flex-basis: 260px;
-    margin: 12px 0;
+    margin: 32px 0;
     border-radius: 8px;
+}
+
+p.friends-name {
+    padding: 0px 5px 0 4px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #919191;
 }
 
 .friends-list{
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 32px;
     justify-content: center;
 }
 
 img.friends-round-photo {
-    width: 68px;
-    border-radius: 68px;
-    height: 68px;
+    width: 54px;
+    border-radius: 54px;
+    height: 54px;
     object-fit: cover;
+    margin: 0 0 4px 0;
 }
 
-
+.friends span {
+    color: #7595ae;
+}
 .vk-wall {
-    width: 500px;
+    width: 660px;
+    
 }
 
 .text-information {
@@ -412,7 +424,6 @@ img.friends-round-photo {
 
 .name {
     display: flex;
-    gap: 4px;
     
 }
 
@@ -422,12 +433,130 @@ img.friends-round-photo {
 }
 
 .name p {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
-    margin: 0 0 8px 0;
+    margin: 4px 0 0px 10px;
 }
 
 .status {
     font-size: 12px;
     color: #e4e4e4;
+}
+
+.description-wall {
+    padding: 0 0 0 10px;
+}
+
+.user-about {
+    padding: 13px 0 0 10px;
+}
+
+.user-meta {
+    display: flex;
+    margin: 0 0 6px 0;
+}
+
+.user-meta-description {
+    width: 220px;
+    font-size: 14px;
+    color: #aeaeae;
+}
+
+.user-meta-value{
+    color: #6b81af;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.user-follow-info {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    text-align: center;
+}
+
+p.follow-number {
+    padding: 16px 0 0 20px;
+    font-size: 22px;
+    margin: 0;
+    color: #0f104c;
+}
+
+p.follow-text {
+    margin: 0;
+    padding: 0 0 0 0px;
+    color: #b8abab;
+}
+
+.user-photogallery {
+    padding: 7px 0 16px 16px;
+    background-color: #fff;
+    margin: 22px 0 0 0;
+    border-radius: 8px;
+}
+
+.user-photogallery h3 {
+    color: #0f104c;
+    font-size: 14px;
+    padding: 10px 0 0 6px;
+}
+
+.user-photogallery span {
+    font-size: 18px;
+    margin: 0 0 0 9px;
+}
+
+.user-photogallery-list {
+    display: flex;
+    gap: 8px;
+}
+
+.user-photogallery-list img {
+  
+    height: 141px;
+    margin: 14px 0 0 0;
+    object-fit: cover;
+}
+
+
+.user-wall-post-list {
+    background-color: #fff;
+    border-radius: 4px;
+    margin: 18px 0 0 0;
+    padding: 16px;
+}
+
+.user-image img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 100px;
+}
+
+.user-wall-meta {
+    display: flex;
+}
+
+.user-wall-name {
+    padding: 10px 0 0 16px;
+    margin: 0;
+}
+
+.user-wall-name p{
+    margin: 0;
+}
+
+
+p.date {
+    color: #b2a9b0;
+}
+
+.user-wall-text {
+    color: #50484e;
+    margin: 18px 0 0 5px;
+}
+
+.user-wall-text p{
+    
+    margin: 0;
 }
