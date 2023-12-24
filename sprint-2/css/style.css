@@ -1,6 +1,5 @@
 body{
     margin: 0;
-    background-image: url(../img/back2.png);
 }
 
 /* Указываем box sizing */
@@ -96,13 +95,13 @@ header{
     background-color: #4277a5;
     display: flex;
     justify-content: space-between;
-    height: 40px;
+    height: 49px;
     padding: 0 40px 0 12px;
     width:100%;
 }
 
 .header-middle{
-    width: 960px;
+    width: 1200px;
     margin: 0 auto;
     display: flex;
 }
@@ -112,7 +111,8 @@ header{
     font-size: 24px;
     line-height: 40px;
     padding: 4px 16px 4px 16px;
-    width: 220px;
+    margin: 0 0 0 76px;
+    width: 195px;
     font-weight: 800;
     font-family: 'Roboto', serif;
 }
@@ -152,14 +152,13 @@ input[type="submit"] {
 }
 
 .page {
-    padding: 12px 0;
+    padding: 2px 0;
 }
 
 .center{
     width: 1200px;
     display: flex;
     margin:27px auto;
-    justify-content: space-between;
     gap: 12px;
 }
 
@@ -211,7 +210,7 @@ h6 {
 }
 
 .sidebar-left{
-    flex-basis: 180px;
+    flex-basis: 216px;
     padding: 0 0 0 50px;
 }
 
@@ -251,14 +250,11 @@ h6 {
     padding: 12px;
 }
 
-.user-menu {
-    
-    /* border: 1px solid; */
-}
 
 .user-menu li {
     padding: 4px 4px 10px 0px;
     color: gray;
+    cursor: pointer;
 }
 
 img.wall-post-image {
@@ -560,3 +556,183 @@ p.date {
     
     margin: 0;
 }
+
+
+.d3 {
+    margin: 12px 0 0 0;
+    padding: 0px 0px 0px 25px;
+    border-bottom: 3px solid whitesmoke;
+}
+.d3 form {
+  background: #fff;
+}
+.d3 input, .d3 button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.d3 input {
+  width: 100%;
+  height: 42px;
+  padding-left: 15px;
+}
+.d3 button {
+  height: 42px;
+  width: 42px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.d3 button:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  font-size: 16px;
+  color: #F9F0DA;
+}
+
+.friends-list-wall {
+    padding: 17px 0px 0px 25px;
+}
+
+.friends-list-wall-li {
+    display: flex;
+    padding: 0px 0 4px 0;
+    margin: 0 0 11px 0;
+    border-bottom: 3px solid whitesmoke;
+}
+
+.friends-list-wall-li img {
+    width: 90px;
+    height: 90px;
+    border-radius: 70px;
+}
+
+.friends-list-wall-li-info {
+       margin: 0 0 4px 12px;
+}
+
+.friends-list-wall-li-info a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #4385b4;
+    font-weight: 600;
+}
+
+.friends-list-wall-li-info p {
+    margin: 0 0 4px 0;
+}
+
+/*************************************
+*************
+****************
+Friends
+******************
+*****************
+*************************************/
+
+.friends-list-center {
+    flex-basis: 691px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.friends-list-caption {
+    background-color: #fafaff;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 12px 0px 25px;
+}
+
+.all-online-freinds {
+    display: flex;
+}
+
+.online-friends-caption {
+    margin: 0 0 0 17px;
+}
+
+.search-friends-btn {
+    background-color: #4277a5 !important;
+    font-size: 14px;
+    padding: 4px;
+    border: none;
+    width: 124px;
+}
+
+.second-right-sidebar {
+    width: 254px;
+    /* background-color: #fff; */
+    border-radius: 4px;
+    margin: 0 0 0 9px;
+}
+
+.friends-request {
+    background-color: #fff;
+    /* padding: 15px 0 10px 18px; */
+    padding: 8px 0 0 0;
+}
+ul.friends-request-list li {
+    margin: 0 0 0px 0;
+    padding: 15px 0 10px 18px;
+}
+
+li.active{
+    background-color: #ededfd;
+}
+
+.recomendet-friends {
+    margin: 16px 0 0 0;
+    padding: 0px 0 0px 0px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+h3.recomendet-friends-caption {
+    font-size: 14px;
+    padding: 10px 0 0px 18px;
+    color: #7c7c9e;
+}
+
+.recomendet-friends-list {
+    margin: 22px 0 0 0;
+    padding: 0px 0 10px 18px;
+
+}
+
+.recomendet-friends-li {
+    display: flex;
+    margin: 0 0 20px 0;
+}
+
+
+.recomendet-friends-li img {
+    width: 63px;
+    height: 63px;
+    object-fit: cover;
+    border-radius: 63px;
+}
+.recomendet-friends-info {
+    margin: 0px 0 0 8px;
+}
+
+p.recomendet-friends-info-name {
+    margin: 0;
+    font-size: 14px;
+    color: gray;
+}
+
+p.recomendet-friends-info-friends {
+    margin: 0;
+    font-size: 14px;
+    color: gray;
+}
+
+.request-friends {
+    color: gray !important;
+    background-color: transparent !important;
+    border: none !important;
+    font-size: 12px !important;
+}
+
+
