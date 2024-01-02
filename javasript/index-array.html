@@ -9,14 +9,93 @@
 
 <body>
     <script>
-        var n = prompt("Количество");
-        n = parseInt(n);
-        var array = [];
-        for (var i = 0; i < n; i++) {
-            array.push(prompt('Элемент'));
+        // var n = prompt("Количество");
+        // n = parseInt(n);
+        // var array = [];
+        // for (var i = 0; i < n; i++) {
+        //     array.push(prompt('Элемент'));
+        // }
+        // array.reverse();
+        // alert(array.join(" "));
+
+        // var n = prompt("Количество");
+        // n = parseInt(n);
+        // var array = [];
+        // for (var i = 0; i < n; i++) {
+        //     array.push(prompt('Элемент'));
+        // }
+        // const maxArray = Math.max(...array);
+        // alert(maxArray);
+
+        // var n = prompt("Количество");
+        // n = parseInt(n);
+        // var array = [];
+        // for (var i = 0; i < n; i++) {
+        //     array.push(parseFloat(prompt('Элемент')));
+        // }
+        // var sum = 0;
+        // for (var i = 0; i < array.length; i++) {
+        //     sum += array[i];
+        // }
+
+        // var average = sum / array.length;
+        // alert(sum + " " + average);
+
+        // var n = prompt("Количество");
+        // n = parseInt(n);
+        // var array = [];
+        // for (var i = 0; i < n; i++) {
+        //     array.push(parseFloat(prompt('Элемент')));
+        // }
+        // var squares = array.map(function (element) {
+        //     return element * element;
+        // });
+        // alert(squares.join(" "));
+
+        // users = [
+        //     { "login": "ilyas", "password": "qwerty" },
+        //     { "login": "eldar", "password": "qqqqq" },
+        //     { "login": "assylkhan", "password": "qweqwe" },
+        //     { "login": "anel", "password": "asdasd" },
+        //     { "login": "alibek", "password": "aaaaaa" },
+        //     { "login": "1", "password": "2" }
+        // ];
+
+        // var loginIntro = prompt("Введите логин");
+        // var passwordIntro = prompt("Введите пароль");
+        // var isAuthenticated = false;
+        // for (var i = 0; i < users.length; i++) {
+        //     if (users[i].login === loginIntro && users[i].password === passwordIntro) {
+        //         isAuthenticated = true;
+        //         break;
+        //     }
+        // }
+        // if (isAuthenticated) {
+        //     alert("Welcome, you are authenticated");
+        // } else {
+        //     alert("User not found");
+        // }
+
+        var books = [
+            { title: "Harry Potter and the Philosopher's Stone", author: "Joanne Rowling", isbn: "1233123", price: "$50" },
+            { title: "Harry Potter and the Chamber of Secrets", author: "Joanne Rowling", isbn: "222332", price: "$40" },
+            { title: "Harry Potter and the Prisoner of Azkaban", author: "Joanne Rowling", isbn: "452323", price: "$55" },
+        ];
+        var enteredAuthor = prompt("Enter the author's name:");
+        var isAuthorFound = false;
+        var text ="";
+        for (var i = 0; i < books.length; i++) {
+            if (books[i].author === enteredAuthor) {
+                text+=books[i].title + books[i].author + books[i].isbn + books[i].price + "\n";
+                isAuthorFound = true;
+            }
         }
-        array.reverse();
-        alert(array.join(" "));
+        if (!isAuthorFound) {
+            alert("No books found for the entered author.");
+        }else{
+            alert(text);
+        }
+
     </script>
 </body>
 
