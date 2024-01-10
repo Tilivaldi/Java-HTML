@@ -91,26 +91,3 @@ p{
     scroll-behavior: auto !important;
   }
 }
-
-div#options {
-  margin: 0 auto;
-  width: 200px;
-}
-
-.convertor-center {
-  width: 1110px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-}
-
-.convertor-title-summa{
-  font-size: 16px;
-  margin: 0 0 4px 0;
-}
-
-.convertor-title {
-  font-size: 16px;
-  margin: 0 0 4px 0;
-  font-weight: 600;
-}

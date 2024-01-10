@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+
+    <h2>Registration Form</h2>
+
+    <form action="#" method="post">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <br>
+
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname" required>
+
+        <br>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+            <option value="usa">Kazakhstan</option>
+            <option value="canada">Russia</option>
+            <option value="uk">USA</option>
+            
+        </select>
+
+        <br>
+
+        <!-- Phone Number -->
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+        
+
+        <br>
+
+        <!-- Buttons -->
+        <button type="submit" name="register">Register</button>
+        <button type="submit" name="saveDraft">Save to Draft</button>
+
+    </form>
+
+</body>
+</html>
