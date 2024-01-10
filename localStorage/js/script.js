@@ -1,39 +1,32 @@
-
-
-let users = [
-
-  {name: "Aibek", login: "aibek01", password: "ai123"},
-
-  {name: "Ilyas", login: "ilyas05", password: "il123"},
-
-  {name: "Eldar", login: "eldar07", password: "el123"}
-
-];
-
- 
-
-// сперва переведем в json формат
-
-let jsonValue = JSON.stringify(users);
-
-console.log('\n--- after array to JSON ---');
-
-console.log(jsonValue);
+let users = []; 
+// localStorage.clear();
+    function addUser(){
+      const formElement = document.getElementById('form1');
+      var forms = document.forms;
+      
+      let name = document.getElementById('name');
+      let surname = document.getElementById('surname');
+      let country = document.getElementById('country');
+      let phone = document.getElementById('phone');
 
  
 
-// затем заново преобразуем в массив объектов
+      let newUser = {};
 
-let usersArray = JSON.parse(jsonValue);
+      newUser.name = name;
+      newUser.surname = surname;
+      newUser.country = country;
+      newUser.phone = parseInt(phone); 
 
-console.log('\n--- after JSON to array ---');
+      users.push(newUser); 
 
- 
+      updateStorage(); //обновляем localStorage после изменения массива
 
-// выведем данные массива
+      updateUserList();
+      function updateStorage(){
 
-for(let u of usersArray){
+        localStorage.users = JSON.stringify(users);
+  
+      }
 
-        console.log('name: ' + u.name + ' login: ' + u.login);
-
-}
+    }

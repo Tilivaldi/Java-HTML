@@ -11,7 +11,7 @@
 <body>
     <section class="page">
 
-        <form action="#" method="post">
+        <form action="#" method="post" id="form">
 
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -35,17 +35,18 @@
 
             <!-- Phone Number -->
             <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+            <input type="tel" id="phone" name="phone"  required>
 
 
             <br>
 
             <!-- Buttons -->
-            <button type="submit" name="register" class="register">Register</button>
+            <button type="submit" name="register" class="register" onclick="addUser()">Register</button>
             <button type="submit" name="saveDraft" class="save-to-draft">Save to Draft</button>
 
         </form>
     </section>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
