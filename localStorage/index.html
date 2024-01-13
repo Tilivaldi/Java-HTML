@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body onload="initArray()">
     <section class="page">
 
         <form action="#" method="post" id="form">
@@ -25,9 +25,9 @@
 
             <label for="country">Country:</label>
             <select id="country" name="country" required>
-                <option value="usa">Kazakhstan</option>
-                <option value="canada">Russia</option>
-                <option value="uk">USA</option>
+                <option value="Kazakstan">Kazakhstan</option>
+                <option value="Russia">Russia</option>
+                <option value="USA">USA</option>
 
             </select>
 
@@ -42,11 +42,12 @@
 
             <!-- Buttons -->
             <button type="submit" name="register" class="register" onclick="addUser()">Register</button>
-            <button type="submit" name="saveDraft" class="save-to-draft">Save to Draft</button>
+            <button type="submit" name="saveDraft" class="save-to-draft" onclick="saveToDraft()">Save to Draft</button>
 
         </form>
     </section>
     <script src="js/script.js"></script>
+    <!-- <script src="js/script2.js"></script> -->
 </body>
 
 </html>

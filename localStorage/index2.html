@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <title>Local Storage</title>
+
+  <style>
+
+    .crossed {text-decoration: line-through;} /* то есть перечеркнуть текст */
+
+  </style>
+
+</head>
+
+<body>
+
+  <button onclick="addFruit()">Add fruit</button>
+
+  <button onclick="removeFruit()">Remove fruit</button>
+
+ 
+
+  <h3>Fruit list</h3>
+
+  <!-- в этом DIV мы будем выводить все фрукты -->
+
+  <div id="fruits"></div>
+
+ 
+
+  <script>
+
+    let fruitsArray = [];
+
+ 
+
+    function addFruit(){
+
+      let name = prompt('enter fruit name: ');
+
+      let kilo = prompt('enter how many kilo: ');
+
+ 
+
+      let newFruit = {};
+
+      newFruit.name = name;
+
+      newFruit.kilo = parseInt(kilo);
+
+ 
+
+      fruitsArray.push(newFruit);
+
+ 
+
+      updateStorage(); //обновляем localStorage после изменения массива
+
+      updateFruitList();
+
+    }
+
+ 
+
+    function removeFruit(){
+
+      let name = prompt('enter fruit name to remove: ');
+
+ 
+
+      for(let i=0; i<fruitsArray.length; i++){
+
+        if(fruitsArray[i].name == name){
+
+          fruitsArray.splice(i,1);
+
+          break;
+
+        }
+
+      }
+
+      updateStorage(); //обновляем localStorage после изменения массива
+
+      updateFruitList();
+
+    }
+
+ 
+
+    // теперь после каждого изменения массива надо также обновлять localStorage
+
+    function updateStorage(){
+
+      localStorage.fruits = JSON.stringify(fruitsArray);
+
+    }
+
+ 
+
+    // при вызове данной функции мы или добавляем 
+
+    // или удаляем(если уже есть этот класс) класс
+
+    // у элемента на котором произошло событие
+
+    function crossFruit(){
+
+      event.target.classList.toggle('crossed');
+
+    }
+
+ 
+
+    function updateFruitList(){
+
+      fruits.remove();
+
+ 
+
+      let fruitsDiv = document.createElement('div');
+
+      fruitsDiv.id = 'fruits';
+
+ 
+
+      for(let f of fruitsArray){
+
+        let div = document.createElement('div');
+
+        div.innerHTML = '<p>' + f.name + ' - ' + f.kilo + 'kg </p>'
+
+        div.className = "fruitDiv";
+
+        fruitsDiv.append(div);
+
+ 
+
+        // при dblclick на элементе div или его дочерних элементах вызываем crossFruit
+
+        div.addEventListener('dblclick', crossFruit);
+
+      }
+
+      document.body.append(fruitsDiv);
+
+      
+
+    }
+
+  </script>
+
+</body>
+
+</html>
