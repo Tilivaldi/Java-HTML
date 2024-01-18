@@ -1,8 +1,3 @@
-
-
-
-
-
 function addToBasket(product, price) {
     let basket = JSON.parse(localStorage.getItem('basket')) || [];
     let item = { product: product, price: price };
@@ -34,5 +29,4 @@ function updateBasketView() {
     }
 }
 
-// Инициализация отображения корзины при загрузке страницы
 updateBasketView();
