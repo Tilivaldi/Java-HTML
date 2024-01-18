@@ -14,36 +14,37 @@
     </header>
     <section class="page">
         <div class="product-list">
-            <div class="product">
+            <div class="product" data-product="Iphone 12 Pro" data-price="1200">
                 <div class="product-name-price">
                     <span class="product-name">Iphone 12 Pro</span> - <span class="product-price">1 200 USD</span></h4>
                 </div>
                 <p class="product-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi quidem
                     eos corporis omnis quaerat, eum voluptatibus molestias quod quas.</p>
-                <input type="button" value="+ ADD TO BASKET">
+                <input type="button" value="+ ADD TO BASKET" onclick="addToBasket('Iphone 12 Pro', 1200)">
+            </div>
+           
+            <div class="product">
+                <div class="product-name-price" data-product="Iphone 13 Pro" data-price="1300">
+                    <span class="product-name">Iphone 13 Pro</span> - <span class="product-price">1 300 USD</span></h4>
+                </div>
+                <p class="product-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi quidem
+                    eos corporis omnis quaerat, eum voluptatibus molestias quod quas.</p>
+                <input type="button" value="+ ADD TO BASKET" onclick="addToBasket('Iphone 13 Pro', 1300)">
             </div>
 
             <div class="product">
-                <div class="product-name-price">
-                    <span class="product-name">Iphone 12 Pro</span> - <span class="product-price">1 200 USD</span></h4>
+                <div class="product-name-price" data-product="Iphone 14 Pro" data-price="1400">
+                    <span class="product-name">Iphone 14 Pro</span> - <span class="product-price">1 400 USD</span></h4>
                 </div>
                 <p class="product-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi quidem
                     eos corporis omnis quaerat, eum voluptatibus molestias quod quas.</p>
-                <input type="button" value="+ ADD TO BASKET">
-            </div>
-
-            <div class="product">
-                <div class="product-name-price">
-                    <span class="product-name">Iphone 12 Pro</span> - <span class="product-price">1 200 USD</span></h4>
-                </div>
-                <p class="product-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi quidem
-                    eos corporis omnis quaerat, eum voluptatibus molestias quod quas.</p>
-                <input type="button" value="+ ADD TO BASKET">
+                <input type="button" value="+ ADD TO BASKET" onclick="addToBasket('Iphone 14 Pro', 1400)">
             </div>
 
 
         </div>
     </section>
+    <script src="js/script.js"></script>
 
 </body>
 

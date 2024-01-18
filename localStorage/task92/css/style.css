@@ -120,3 +120,36 @@ input[type="button"] {
     font-size: 24px;
     font-weight: 600;
 }
+
+.basket-list {
+	width: 100%;
+	border: none;
+	margin-bottom: 20px;
+  text-align: center;
+}
+
+.basket-list thead th {
+	padding: 10px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+	text-align: center;
+	color: #444441;
+	border-top: 2px solid #716561;
+	border-bottom: 2px solid #716561;
+}
+
+.basket-list tbody td {
+	padding: 10px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #444441;
+	border-top: 1px solid #716561;
+}
+
+button.remove-btn {
+  background-color: darkred;
+  color: #fff;
+  padding: 4px;
+  width: 92px;
+}
