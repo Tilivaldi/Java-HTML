@@ -1,70 +1,99 @@
-// Простой объект для хранения пользователей
+
 const users = [
-    { email: 'user@example.com', password: 'password123'},
-    // Добавьте других пользователей по аналогии
+    { email: 'tilvaldi@mail.ru', password: '123', name: 'User Name', country: 'Kazakhstan', birthday: '1990-01-01' },
+   
 ];
 
-// Функция для авторизации пользователя
-function login(email, password) {
-    const user = users.find(u => u.email === email && u.password === password);
-    return user;
-}
-
-// Функция для сохранения текущего пользователя в localStorage
-function setCurrentUser(user) {
-    localStorage.setItem('currentUser', JSON.stringify(user));
-}
-
-// Функция для получения текущего пользователя из localStorage
 function getCurrentUser() {
     const userString = localStorage.getItem('currentUser');
     return userString ? JSON.parse(userString) : null;
 }
 
-// Функция для отображения информации о пользователе на странице профиля
+function setCurrentUser(user) {
+    localStorage.setItem('currentUser', JSON.stringify(user));
+}
+
+function updateMenu() {
+    const loginLink = document.getElementById('loginLink');
+    const registerLink = document.getElementById('registerLink');
+    const tweetsLink = document.getElementById('tweetsLink');
+    const profileLink = document.getElementById('profileLink');
+
+    if (loginLink && registerLink && tweetsLink && profileLink) {
+        const currentUser = getCurrentUser();
+
+        if (currentUser) {
+            if (loginLink.style) loginLink.style.display = 'none';
+            if (registerLink) registerLink.textContent = 'Logout';
+            if (tweetsLink) tweetsLink.style.display = 'inline-block';
+            if (profileLink) profileLink.style.display = 'inline-block';
+        } else {
+            if (loginLink && loginLink.style) loginLink.style.display = 'inline-block';
+            if (registerLink) registerLink.textContent = 'Register';
+            if (tweetsLink) tweetsLink.style.display = 'none';
+            if (profileLink) profileLink.style.display = 'none';
+        }
+    }
+}
+
+
+function checkAuthentication() {
+    const user = getCurrentUser();
+
+    if (window.location.pathname.endsWith("index.html")) {
+        const loginForm = document.getElementById('loginForm');
+
+        if (loginForm) {
+            loginForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                const user = users.find(u => u.email === email && u.password === password);
+
+                if (user) {
+                    setCurrentUser(user);  
+                    updateMenu();  
+                    window.location.href = 'profile.html';  
+                } else {
+                    alert('Invalid email or password. Please try again.');
+                }
+            });
+        }
+    }
+
+  
+    if (user && window.location.pathname.endsWith("profile.html")) {
+        displayUserProfile();
+    } else {
+        updateMenu();
+    }
+}
+
+checkAuthentication();
+
+function logout() {
+    localStorage.removeItem('currentUser');  
+    updateMenu(); 
+    window.location.href = 'index.html';  
+}
+
+
 function displayUserProfile() {
     const user = getCurrentUser();
-    if (user) {
-        const profileInfo = document.getElementById('profileInfo');
+    const profileInfo = document.getElementById('profileInfo');
+
+    if (profileInfo && user) {
         profileInfo.innerHTML = `<p>Email: ${user.email}</p>
                                   <p>Name: ${user.name}</p>
                                   <p>Country: ${user.country}</p>
                                   <p>Birthday: ${user.birthday}</p>`;
     }
 }
-
-// Инициализация отображения информации о пользователе при загрузке страницы профиля
 displayUserProfile();
 
-// Обработчик формы входа
-document.getElementById('loginForm').addEventListener('submit', function (event) {
-    event.preventDefault();
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const user = login(email, password);
-    if (user) {
-        // Если вход успешен, перейти на страницу профиля
-        showProfile(user);
-        updateMenu(user.name);
-        window.location.href = 'profile.html';
-    } else {
-        alert('Invalid email or password. Please try again.');
-    }
-});
-
-// Функция для обновления меню после авторизации
-function updateMenu(userName) {
-    const loginLink = document.getElementById('loginLink');
-    const registerLink = document.getElementById('registerLink');
-    const tweetsLink = document.getElementById('tweetsLink');
-
-    if (userName) {
-        // Если пользователь авторизован, меняем Login на имя пользователя
-        loginLink.textContent = userName;
-        registerLink.style.display = 'none'; // Скрываем Register, так как пользователь уже зарегистрирован
-    } else {
-        // Если пользователь не авторизован, возвращаем Login и показываем Register
-        loginLink.textContent = 'Login';
-        registerLink.style.display = 'inline-block';
-    }
+function registerUser(email, password, name, country, birthday) {
+    const newUser = { email, password, name, country, birthday };
+    users.push(newUser);
+    setCurrentUser(newUser);
 }
+
